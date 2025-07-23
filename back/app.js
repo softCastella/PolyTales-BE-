@@ -4,14 +4,18 @@ require('dotenv').config(); // .env 파일 로드
 const express = require('express');
 const cors = require("cors");
 const path = require("path");
-
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 
 const authRouter = require("./src/routes/auth");
-const postRouter = require("./src/routes/postRouter");
-const todosRouter = require("./src/routes/todos");
+const storiesRouter = require("./src/routes/stories");
+const notesRouter = require("./src/routes/notes");
+// const progressRouter = require("./src/routes/progress");
+// const languagesRouter = require("./src/routes/languages");
+// const usersRouter = require("./src/routes/users");
+
 const models = require("./src/models");
+models.sequelize.sync({ force: true });
 const { logger, logging } = require("./src/middlewares/logger");
 
 const app = express();
@@ -28,8 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/auth", authRouter);
-app.use("/posts", postRouter);
-app.use("/todos", todosRouter);
+app.use("/stories", storiesRouter);
+app.use("/notes", notesRouter);
+// app.use("/progress", progressRouter);
+// app.use("/languages", languagesRouter);
+// app.use("/users", usersRouter);
+
 
 // Swagger 설정
 const swaggerDocument = YAML.load(path.join(__dirname, "swagger.yaml"));

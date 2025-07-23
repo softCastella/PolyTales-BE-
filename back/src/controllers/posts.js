@@ -93,23 +93,23 @@ const findPost = (req, res) => {
   res.status(200).end();
 };
 const updatePost = (req, res) => {
- console.log("updatePost 호출됨");
+  console.log("updatePost 호출됨");
   res.status(200).end();
 };
 const createComment = (req, res) => {
- console.log("createComment 호출됨");
+  console.log("createComment 호출됨");
   res.status(200).end();
 };
 const findComments = (req, res) => {
- console.log("findComments 호출됨");
+  console.log("findComments 호출됨");
   res.status(200).end();
 };
 const updateComment = (req, res) => {
- console.log("updateComment 호출됨");
+  console.log("updateComment 호출됨");
   res.status(200).end();
 };
 const deleteComment = (req, res) => {
- console.log("deleteComment 호출됨");
+  console.log("deleteComment 호출됨");
   res.status(200).end();
 };
 
