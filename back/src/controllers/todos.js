@@ -75,6 +75,7 @@ const deleteTodo = async (req, res) => {
 };
 
 module.exports = {
+  getNotesByMonth,
   createTodo,
   findAllTodos,
   findTodo,
