@@ -17,8 +17,12 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  // SQLite는 config 객체만 넘기면 됨
-  sequelize = new Sequelize(config);
+  sequelize = new Sequelize(
+    config.database,
+    config.username,
+    config.password,
+    config
+  );
 }
 
 // 모델 파일 동적으로 로드

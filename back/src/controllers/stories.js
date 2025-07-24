@@ -53,7 +53,7 @@ const getStoryById = async (req, res) => {
         res.status(500).json({ message: "서버 오류" });
     }
 };
-// GET /stories/level/:level - 레벨별 스토리 조회
+// GET /stories/:id - 특정 스토리 상세 조회
 const getStoryByLevel = async (req, res) => {
     try {
         const { level } = req.params;
@@ -62,15 +62,24 @@ const getStoryByLevel = async (req, res) => {
             where: {
                 langLevel: level
             },
-            order: [['storyId', 'ASC']]
+            include: [
+                {
+                    model: models.Language,
+                    as: "languages"
+                }
+            ]
         });
+
+        if (!story) {
+            return res.status(404).json({ message: "스토리를 찾을 수 없습니다." });
+        }
 
         res.status(200).json({
             message: "ok",
             data: stories
         });
     } catch (error) {
-        console.error("스토리 레벨별 조회 오류:", error);
+        console.error("스토리 상세 레벨별 조회 오류:", error);
         res.status(500).json({ message: "서버 오류" });
     }
 };

@@ -129,3 +129,10 @@ info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-23T15:02:48.042Z"}
 info: POST / - 500 (54ms) {"timestamp":"2025-07-23T15:02:52.599Z"}
 info: POST / - 500 (10ms) {"timestamp":"2025-07-23T15:02:57.411Z"}
+info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:11:52.334Z"}
+info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:12:40.341Z"}
+info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:31:23.071Z"}
+info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:34:54.921Z"}
+info: GET / - 404 (9ms) {"timestamp":"2025-07-24T12:36:10.127Z"}
+info: GET /favicon.ico - 404 (6ms) {"timestamp":"2025-07-24T12:36:10.314Z"}
+info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:43:10.587Z"}

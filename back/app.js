@@ -4,18 +4,15 @@ require('dotenv').config(); // .env 파일 로드
 const express = require('express');
 const cors = require("cors");
 const path = require("path");
+
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 
 const authRouter = require("./src/routes/auth");
-const storiesRouter = require("./src/routes/stories");
 const notesRouter = require("./src/routes/notes");
-// const progressRouter = require("./src/routes/progress");
-// const languagesRouter = require("./src/routes/languages");
-// const usersRouter = require("./src/routes/users");
-
+const storiesRouter = require("./src/routes/stories"); // 새로 추가
+const progressRouter = require("./src/routes/progress"); // 진행 상황 라우터 추가
 const models = require("./src/models");
-models.sequelize.sync({ force: true });
 const { logger, logging } = require("./src/middlewares/logger");
 
 const app = express();
@@ -31,13 +28,10 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/auth", authRouter);
-app.use("/stories", storiesRouter);
-app.use("/notes", notesRouter);
-// app.use("/progress", progressRouter);
-// app.use("/languages", languagesRouter);
-// app.use("/users", usersRouter);
-
+app.use("/auth", authRouter); // 인증 관련 라우터
+app.use("/notes", notesRouter);  // 노트 라우터 추가
+app.use("/progress", progressRouter); // 진행 상황 라우터 추가
+app.use("/stories", storiesRouter); // 스토리 라우터 추가
 
 // Swagger 설정
 const swaggerDocument = YAML.load(path.join(__dirname, "swagger.yaml"));

@@ -11,14 +11,10 @@ export default function Header() {
     navigate('/login'); //  "시작하기"
   };
 
-  const handleLogoClick = () => {
-    navigate('/'); //  홈으로 이동 추가
-  };
-
   return (
     <header className="header">
       <div className="header-left">
-        <img src={headerLogo} alt="logo" className="header-logo" onClick={handleLogoClick} />
+        <img src={headerLogo} alt="logo" className="header-logo" />
       </div>
       <div className="header-right">
         {user ? (

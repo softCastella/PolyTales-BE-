@@ -38,10 +38,11 @@ const testUser = {
     oauthId: "naver_test_1"      // 필수
 };
 
+// 주석 해제: 실제로 User를 생성하도록 변경
 const seedUser = async () => {
     try {
         console.log('🌱 사용자 테스트 데이터 삽입 시작...');
-        // await models.User.create(testUser);
+        await models.User.create(testUser); // 주석 해제
         console.log('✅ 사용자 테스트 데이터 삽입 완료!');
     } catch (error) {
         console.error('❌ 사용자 데이터 삽입 오류:', error);
@@ -49,19 +50,17 @@ const seedUser = async () => {
 };
 
 if (require.main === module) {
-    seedUser().then(() => {
-        console.log('🏁 시드 데이터 작업 완료');
-        process.exit(0);
-    });
+    seedUser()
+        .then(async () => {
+            await seedStories();
+            console.log('🏁 시드 데이터 작업 완료');
+            process.exit(0);
+        })
+        .catch((err) => {
+            console.error('❌ 시드 데이터 작업 오류:', err);
+            process.exit(1);
+        });
 }
 
 
-module.exports = { seedStories, seedUser };
-
-// 직접 실행할 경우
-if (require.main === module) {
-    seedStories().then(() => {
-        console.log('🏁 시드 데이터 작업 완료');
-        process.exit(0);
-    });
-}
+module.exports = { seedStories, seedUser, testUser, testStories };
