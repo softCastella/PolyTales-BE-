@@ -12,10 +12,13 @@ export default function Detail() {
   const toggleBookmark = () => setBookmarked(prev => !prev);
   const goBack = () => navigate('/'); // back 버튼 -> 홈 이동
 
+<<<<<<< HEAD
   const handleReadClick = () => {
     navigate('/learn'); //  "학습하기"
   };
 
+=======
+>>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
   return (
     <div className="detail-container">
       <div className="back-button-wrapper">
@@ -52,7 +55,11 @@ export default function Detail() {
             </p>
           </div>
 
+<<<<<<< HEAD
           <button className="read-button" onClick={handleReadClick}>읽기</button>
+=======
+          <button className="read-button">읽기</button>
+>>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
         </div>
       </div>
     </div>

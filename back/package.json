@@ -16,7 +16,11 @@
     "bcryptjs": "^3.0.2",
     "better-sqlite3": "^12.2.0",
     "cors": "^2.8.5",
+<<<<<<< HEAD
     "dotenv": "^17.2.1",
+=======
+    "dotenv": "^17.0.1",
+>>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
     "express": "^4.21.2",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
