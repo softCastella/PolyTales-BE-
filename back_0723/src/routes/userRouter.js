@@ -1,14 +1,14 @@
-// /routes/userRouter.js
+// back/routes/userRouter.js
 const express = require('express');
 const router = express.Router();
-const db = require('../db/db');
+const db = require('../database/initDatabase.js');
 
 router.post('/signup', (req, res) => {
-  const { email, password, name } = req.body;
+  const { email, password, userName } = req.body;
 
   try {
-    db.prepare("INSERT INTO users (email, password, name) VALUES (?, ?, ?)")
-      .run(email, password, name);
+    db.prepare("INSERT INTO users (email, password, userName) VALUES (?, ?, ?)")
+      .run(email, password, userName);
 
     res.json({ success: true });
   } catch (err) {

@@ -1,7 +1,11 @@
 {
   "development": {
-    "dialect": "sqlite",
-    "storage": "sample.db"
+    "username": "postgres",
+    "password": "your_password",
+    "database": "polytales_dev",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
