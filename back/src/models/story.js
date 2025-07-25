@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         {
-            tableName: "stories",
+            tableName: "Stories",
             timestamps: true // createdAt, updatedAt 사용
         }
     );

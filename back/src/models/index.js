@@ -30,11 +30,36 @@ fs
       file.indexOf('.test.js') === -1
     );
   })
+  // .forEach(file => {
+  //   const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+  //   db[model.name] = model;
+  // });
+.filter(file => {
+    return (
+      file.indexOf('.') !== 0 &&
+      file !== basename &&
+      file.slice(-3) === '.js' &&
+      file.indexOf('.test.js') === -1
+    );
+  })
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
+    console.log(`Loading model file: ${file}`);
+    try {
+      const modelFactory = require(path.join(__dirname, file));
+      console.log(`Model factory type: ${typeof modelFactory}`);
+      if (typeof modelFactory === 'function') {
+        const model = modelFactory(sequelize, Sequelize.DataTypes);
+        db[model.name] = model;
+        console.log(`Successfully loaded model: ${model.name}`);
+      } else {
+        console.error(`Model ${file} does not export a function`);
+      }
+    } catch (error) {
+      console.error(`Error loading model ${file}:`, error);
+    }
   });
 
+  
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);

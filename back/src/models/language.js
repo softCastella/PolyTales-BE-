@@ -33,14 +33,14 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 references: { // ✅ PostgreSQL 외래키 명시
                     model: 'Stories',
-                    key: 'id'
+                    key: 'storyId'
                 },
                 onUpdate: 'CASCADE', // ✅ 추가
                 onDelete: 'CASCADE'  // ✅ 추가
             }
         },
         {
-            tableName: "languages",
+            tableName: "Languages",
             timestamps: false, // createdAt, updatedAt 없음
             indexes: [ // ✅ PostgreSQL 성능 최적화
                 {
@@ -60,6 +60,6 @@ module.exports = (sequelize, DataTypes) => {
             as: "story"
         });
     };
-    
+
     return Language;
 };

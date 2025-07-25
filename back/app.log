@@ -209,3 +209,20 @@ error: Server startup failed {"error":"role \"postgres\" does not exist","timest
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:24:09.167Z"}
 =======
 >>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
+error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:05:32.392Z"}
+error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:06:09.803Z"}
+error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-25T05:06:54.795Z"}
+error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-25T05:46:50.280Z"}
+error: Server startup failed {"error":"column \"id\" referenced in foreign key constraint does not exist","timestamp":"2025-07-25T05:56:47.188Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:07:32.385Z"}
+info: POST / - 401 (18ms) {"timestamp":"2025-07-25T06:11:16.819Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:15:15.517Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:15:26.735Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:15:28.091Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:15:55.810Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:01.655Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:09.929Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:15.262Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:38.621Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:50.354Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:17:25.347Z"}

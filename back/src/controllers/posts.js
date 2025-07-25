@@ -1,4 +1,3 @@
-// back/controllers/posts.js
 const models = require("../models");
 
 const createPost = async (req, res) => {

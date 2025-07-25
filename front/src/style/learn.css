@@ -3,8 +3,7 @@
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
-<<<<<<< HEAD
+  font-family: "Noto Sans KR", sans-serif;
   overflow: hidden;
 }
 
@@ -24,13 +23,13 @@ body {
 
 .div1 {
   grid-area: 1 / 1 / 2 / 4;
-  background: #FFFAC7;
+  background: #fffac7;
   border-radius: 12px;
 }
 
 .div2 {
   grid-area: 1 / 4 / 2 / 13;
-  background: #FFFAC7;
+  background: #fffac7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,14 +45,14 @@ body {
 
 .div4 {
   grid-area: 4 / 1 / 5 / 5;
-  background: #FEFBE0;
+  background: #fefbe0;
   margin: 10px 20px 0 20px;
   border-radius: 12px;
 }
 
 .div5 {
   grid-area: 2 / 6 / 3 / 9;
-  background: #DBE9D3;
+  background: #dbe9d3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,21 +64,21 @@ body {
 
 .div6 {
   grid-area: 4 / 5 / 5 / 9;
-  background: #FEFBE0;
+  background: #fefbe0;
   margin: 10px 20px 0 20px;
   border-radius: 12px;
 }
 
 .div7 {
   grid-area: 3 / 6 / 4 / 9;
-  background: #F6F6F6;
+  background: #f6f6f6;
   margin: 10px 20px 0 20px;
   border-radius: 12px;
 }
 
 .div8 {
   grid-area: 2 / 9 / 5 / 13;
-  background: #F6F6F6;
+  background: #f6f6f6;
   margin: 10px 20px 0 20px;
   border-radius: 12px;
 }
@@ -87,7 +86,7 @@ body {
 .read-start {
   font-size: 0.7rem;
   font-weight: bold;
-  color: #137DFE;
+  color: #137dfe;
   padding: 0px 20px 9px 20px;
   cursor: pointer;
   border: none;
@@ -100,66 +99,11 @@ body {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
-=======
-}
-
-.learn-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.learn-header {
-  background-color: #fff8c6;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-/* 처음부터 읽기 버튼 */
-.read-start {
-  font-size: 0.95rem;
-  /* background-color: #ffbebe; */
-  padding: 0.4rem 1rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #ff6f61;
-}
-
-.story-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  margin: 0;
-}
-
-.learn-main {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.learn-left {
-  flex: 4;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 1rem;
-  overflow: hidden;
-}
-
-.video-area {
-  flex: 2;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
   text-align: center;
 }
 
 .story-img {
   width: 100%;
-<<<<<<< HEAD
   height: auto;
   max-width: 800px;
   border-radius: 12px;
@@ -173,44 +117,21 @@ body {
   font-size: 1.3rem;
   font-weight: bold;
   margin: -4rem 0 0.5rem;
-=======
-  max-width: 600px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.sentence-text {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 1rem 0;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 }
 
 .control-btns {
   display: flex;
   justify-content: center;
   gap: 1rem;
-<<<<<<< HEAD
 }
 
 .btn {
   padding: 0.3rem 0.3rem;
   border: none;
-=======
-  margin-bottom: 1rem;
-}
-
-.btn {
-  background-color: #ffd8d8;
-  padding: 0.5rem 1.2rem;
-  border: none;
-  border-radius: 10px;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
   font-size: 1rem;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .no-bg {
   background: none !important;
 }
@@ -223,21 +144,13 @@ body {
   font-size: 1rem;
   border-radius: 50%;
   color: white;
-  background-color: #5F5C5C;
-=======
-.pause {
-  background-color: #ffeaea;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
+  background-color: #5f5c5c;
 }
 
 .progress-bar {
   height: 6px;
   background-color: #eee;
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 80%;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
   margin: 0 auto;
   border-radius: 3px;
   overflow: hidden;
@@ -249,25 +162,6 @@ body {
   transition: width 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
-.grammar-vocab {
-  flex: 1;
-  overflow-y: auto;
-  padding-top: 1rem;
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-inline: 2rem;
-}
-
-.grammar,
-.vocab {
-  width: 48%;
-}
-
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 .grammar h4,
 .vocab h4 {
   color: #4caf50;
@@ -282,7 +176,6 @@ body {
   color: #444;
 }
 
-<<<<<<< HEAD
 .lang-select {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -344,45 +237,16 @@ body {
   overflow: hidden;
   margin: 0;
   position: relative;
-=======
-.learn-right {
-  flex: 6;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 1rem;
-}
-
-.lang-select {
-  flex: 1;
-  background-color: #e0f2f1;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.memo-box {
-  flex: 2;
-  background-color: #e0f7e9;
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-y: auto;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 }
 
 .memo-head {
   display: flex;
   justify-content: space-between;
-<<<<<<< HEAD
   align-items: center;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  background-color: #67B98A;
-  color: #4D4D4D;
+  background-color: #67b98a;
+  color: #4d4d4d;
   font-size: 1rem;
   border-radius: 12px 12px 0 0;
   box-sizing: border-box;
@@ -400,28 +264,24 @@ body {
   font-weight: bold;
   color: #333;
   margin-bottom: -0.2rem;
-=======
-  margin-bottom: 0.5rem;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 }
 
 .memo-input {
   width: 100%;
-<<<<<<< HEAD
   font-size: 1rem;
   border: none;
   border-bottom: 1px solid #ccc;
   background: transparent;
   padding: 0.2rem 0;
   outline: none;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
   color: #333;
   text-align: left;
 }
 
 .memo-input::placeholder {
-  color: #3F3F3F;
+  color: #3f3f3f;
   font-weight: normal;
 }
 
@@ -432,7 +292,7 @@ body {
   font-size: 0.9rem;
   border: none;
   background: transparent;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   color: #444;
   box-sizing: border-box;
   outline: none;
@@ -490,77 +350,26 @@ body {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-=======
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.memo-placeholder {
-  margin-top: 0.7rem;
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-.tutor-box {
-  flex: 3;
-  background-color: #f1f8e9;
-  padding: 1rem;
-  border-radius: 8px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.tutor-header {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
-}
-
-.tutor-icon {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
-.chat-placeholder {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.chat-send {
-  align-self: flex-end;
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
   background: transparent;
   border: none;
   font-size: 1.3rem;
   cursor: pointer;
 }
-<<<<<<< HEAD
 
 @media (max-width: 768px) {
   .parent {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, auto);
   }
-  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7,
+  .div8 {
     grid-column: 1 / -1;
     margin: 0 8px;
   }
 }
-=======
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
