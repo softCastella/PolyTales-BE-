@@ -136,7 +136,6 @@ info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":
 info: GET / - 404 (9ms) {"timestamp":"2025-07-24T12:36:10.127Z"}
 info: GET /favicon.ico - 404 (6ms) {"timestamp":"2025-07-24T12:36:10.314Z"}
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:43:10.587Z"}
-<<<<<<< HEAD
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-25T01:42:10.415Z"}
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-25T02:06:22.611Z"}
 info: GET / - 404 (5ms) {"timestamp":"2025-07-25T02:13:42.563Z"}
@@ -207,8 +206,6 @@ error: Server startup failed {"error":"database \"agelin\" does not exist","time
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:16:22.794Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:17:00.037Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:24:09.167Z"}
-=======
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:05:32.392Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:06:09.803Z"}
 error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-25T05:06:54.795Z"}
@@ -265,3 +262,4 @@ error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relati
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T04:46:43.874Z"}
 info: GET / - 404 (12ms) {"timestamp":"2025-07-27T04:59:52.832Z"}
 info: GET /favicon.ico - 404 (4ms) {"timestamp":"2025-07-27T04:59:52.938Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:09:37.603Z"}

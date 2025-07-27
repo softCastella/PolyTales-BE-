@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             },
         },
         {
-            tableName: "progresses",
+            tableName: "Progresses",
             timestamps: false,
         }
     );
