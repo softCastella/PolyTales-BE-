@@ -1,15 +1,13 @@
-// back/src/controllers/stories.js
 const models = require("../models");
 
 // GET /stories - 전체 스토리 목록 조회
 const getStories = async (req, res) => {
     try {
-        const { level } = req.query; // 쿼리 파라미터로 레벨 필터링
+        const { level, topic } = req.query; // 쿼리 파라미터로 레벨 필터링
 
         let whereCondition = {};
-        if (level) {
-            whereCondition.langLevel = level;
-        }
+        if (level) whereCondition.langLevel = level;
+        if (topic) whereCondition.langLevel = topic;
 
         const stories = await models.Story.findAll({
             where: whereCondition,
@@ -30,7 +28,6 @@ const getStories = async (req, res) => {
 const getStoryById = async (req, res) => {
     try {
         const { id } = req.params;
-
         const story = await models.Story.findByPk(id, {
             include: [
                 {
@@ -53,7 +50,8 @@ const getStoryById = async (req, res) => {
         res.status(500).json({ message: "서버 오류" });
     }
 };
-// GET /stories/:id - 특정 스토리 상세 조회
+
+// GET /stories/:level - 레벨별 스토리 목록 조회
 const getStoryByLevel = async (req, res) => {
     try {
         const { level } = req.params;
@@ -67,10 +65,11 @@ const getStoryByLevel = async (req, res) => {
                     model: models.Language,
                     as: "languages"
                 }
-            ]
+            ],
+            order: [['storyId', 'ASC']]
         });
 
-        if (!story) {
+        if (!stories) {
             return res.status(404).json({ message: "스토리를 찾을 수 없습니다." });
         }
 

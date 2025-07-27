@@ -1,7 +1,4 @@
-// File: back/controllers/auth.js
 // 사용자 등록 및 로그인 관련 로직을 처리하는 컨트롤러입니다.
-
-// back/controllers/auth.js
 require('dotenv').config();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');

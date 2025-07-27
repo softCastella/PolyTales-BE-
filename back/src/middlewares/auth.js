@@ -1,4 +1,3 @@
-// back/middlewares/auth.js
 //JWT 토큰 인증 미들웨어 (요청 보호용)
 
 require("dotenv").config();

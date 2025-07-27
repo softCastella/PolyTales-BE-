@@ -53,24 +53,31 @@ app.use((err, req, res, next) => {
   logger.error(`Server Error: ${err.message}`, { stack: err.stack });
   res.status(500).json({
     status: "Error",
-    message: `서버 오류: ${err.stack}`,
+    message: `서버 오류: ${err.message}`,
   });
 });
 
 // ----------------------- [서버 시작] -----------------------
 const PORT = process.env.PORT || 3000; // 포트 설정
-app.listen(PORT, () => {
-  logger.info(`서버가 http://localhost:${PORT} 에서 실행 중 입니다.`);
-  console.log(`서버가 http://localhost:${PORT} 에서 실행 중 입니다.`);
-  models.sequelize
-    .sync({ force: false }) // true -> false
-    .then(() => {
-      console.log("DB connected");
-    })
-    .catch(() => {
-      console.error("DB error");
-      process.exit();
-    });
-});
 
+async function startServer() {
+  try {
+    // 1. 먼저 DB 연결 및 동기화
+    await models.sequelize.sync({ force: false });
+    console.log("✅ DB connected successfully");
+    
+    // 2. DB 연결 성공 후 서버 시작
+    app.listen(PORT, () => {
+      logger.info(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
+      console.log(`🚀 서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
+      // console.log(`📚 API 문서: http://localhost:${PORT}/api-docs`);
+    });
+  } catch (error) {
+    console.error("❌ 서버 시작 실패:", error);
+    logger.error("Server startup failed", { error: error.message });
+    process.exit(1); // ✅ 명시적 종료 코드 : 실패시 완전 종료
+  }
+}
+
+startServer();
 // const initializeDatabase = require('./src/database/initDatabase');
