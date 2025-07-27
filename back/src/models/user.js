@@ -24,20 +24,20 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.TEXT,
                 allowNull: true
             },
-            profile: {
+            profImg: {
                 type: DataTypes.TEXT,
                 allowNull: true
             }
         },
         {
-            tableName: "Users",
+            tableName: "users",
             timestamps: false,
-            indexes: [
-                {
-                    unique: true,
-                    fields: ['oauthProvider', 'oauthId']
-                }
-            ]
+            // indexes: [
+            //     {
+            //         unique: true,
+            //         fields: ['oauthProvider', 'oauthId']
+            //     }
+            // ]
         }
     );
 

@@ -1,5 +1,11 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-// TODO: 실제 progress 관련 라우팅 추가
+const progressController = require('../controllers/progressController');
+
+// 진도 저장(POST)
+router.post('/save', progressController.saveProgress);
+
+// 진도 조회(GET)
+router.get('/', progressController.getProgress);
 
 module.exports = router;

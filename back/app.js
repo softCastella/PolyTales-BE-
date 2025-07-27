@@ -63,9 +63,9 @@ const PORT = process.env.PORT || 3000; // 포트 설정
 async function startServer() {
   try {
     // 1. 먼저 DB 연결 및 동기화
-    await models.sequelize.sync({ force: false });
+    await models.sequelize.sync({ force: false, alter: false });
     console.log("✅ DB connected successfully");
-    
+
     // 2. DB 연결 성공 후 서버 시작
     app.listen(PORT, () => {
       logger.info(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);

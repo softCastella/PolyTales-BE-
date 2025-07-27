@@ -263,3 +263,49 @@ info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"
 info: GET / - 404 (12ms) {"timestamp":"2025-07-27T04:59:52.832Z"}
 info: GET /favicon.ico - 404 (4ms) {"timestamp":"2025-07-27T04:59:52.938Z"}
 error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:09:37.603Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:22:33.161Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:31:18.562Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:41:45.131Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:43:21.184Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:43:42.654Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:56:00.734Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:57:21.578Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:57:51.013Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:43.332Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:46.782Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:53.614Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:57.768Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:27:25.382Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:27:32.235Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:39:52.851Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:39:57.607Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:00.831Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:04.786Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:12.337Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:15.567Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:28.090Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:34.922Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:41.573Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:49.420Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:52.359Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:54.579Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:02.179Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:10.352Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:14.191Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:17.415Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:25.023Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:27.758Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:47.961Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:11.145Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:15.127Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:26.232Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:43.176Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:47.863Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:50.467Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:52.923Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:45:37.119Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:18.340Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:27.519Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:32.423Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:30.464Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:34.775Z"}
