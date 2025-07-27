@@ -3,10 +3,10 @@ const router = express.Router();
 const noteController = require("../controllers/notes");
 
 // http://localhost:3000/notes/
-router.post("/", noteController.createNote);
-router.get("/", noteController.findNotes);
-router.get("/:id", noteController.findNote);
-router.put("/:id", noteController.updateNote);
-router.delete("/:id", noteController.deleteNote);
+router.post("/notes", noteController.createNote);
+router.get("/notes", noteController.findNotes);
+router.get("/notes/:id", noteController.findNote);
+router.put("/notes/:id", noteController.updateNote);
+router.delete("/notes/:id", noteController.deleteNote);
 
 module.exports = router;
