@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "admin1234",
     "database": "polytales_dev",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
   },

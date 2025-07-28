@@ -1,11 +1,85 @@
 import "../style/Login.css";
 import logo from "../style/img/login/loginLogo.png";
-import googleIcon from "../style/img/login/google.png";
+// import googleIcon from "../style/img/login/google.png";
 import naverIcon from "../style/img/login/naver.png";
 import kakaoIcon from "../style/img/login/kakao.png";
 import { useEffect } from "react";
 
 export default function Login() {
+  // Google Sign-In 콜백 함수 - 백엔드 연동 추가
+  async function handleCredentialResponse(response) {
+    try {
+      // Google ID 토큰을 디코딩하여 사용자 정보를 얻습니다.
+      const responsePayload = decodeJwtResponse(response.credential);
+      console.log("Google 사용자 정보:", responsePayload);
+
+      // 백엔드로 Google 로그인 데이터 전송
+      const loginData = {
+        oauthProvider: "google",
+        oauthId: responsePayload.sub,
+        email: responsePayload.email,
+        nickName: responsePayload.name,
+        profImg: responsePayload.picture,
+      };
+
+      // 백엔드 API 호출
+      const apiResponse = await fetch("http://localhost:3000/auth/google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      const result = await apiResponse.json();
+
+      if (apiResponse.ok) {
+        console.log("로그인 성공:", result);
+        // 토큰을 localStorage에 저장
+        localStorage.setItem("token", result.token);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        // 홈페이지로 리다이렉트
+        window.location.href = "/";
+      } else {
+        console.error("로그인 실패:", result);
+        alert("로그인에 실패했습니다. 다시 시도해주세요.");
+      }
+    } catch (error) {
+      console.error("Google 로그인 오류:", error);
+      alert("로그인 중 오류가 발생했습니다.");
+    }
+  }
+
+  // Google 아이콘 클릭 시 Google 로그인 실행
+  const handleGoogleLogin = () => {
+    if (window.google) {
+      window.google.accounts.id.prompt();
+    }
+  };
+
+  useEffect(() => {
+    window.handleCredentialResponse = handleCredentialResponse; // 전역 등록
+    if (window.google) {
+      window.google.accounts.id.initialize({
+        client_id:
+          "985549267807-mu62klcok2e4q3su4qbfqklmb0n5b990.apps.googleusercontent.com",
+        callback: handleCredentialResponse,
+      });
+      // 공식 버튼도 함께 렌더링 (모든 환경 지원)
+      window.google.accounts.id.renderButton(
+        document.getElementById("googleSignInDiv"),
+        { theme: "outline", size: "large" }
+      );
+    }
+  }, []);
+
+  //로그아웃 (임시 작성)
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.reload();
+  };
+
   // JWT 토큰 디코딩 함수 - 여기에 추가
   function decodeJwtResponse(token) {
     const base64Url = token.split(".")[1];
@@ -20,69 +94,6 @@ export default function Login() {
     );
     return JSON.parse(jsonPayload);
   }
-
-  // Google Sign-In 콜백 함수 - 백엔드 연동 추가
-  async function handleCredentialResponse(response) {
-    try {
-      // Google ID 토큰을 디코딩하여 사용자 정보를 얻습니다.
-      const responsePayload = decodeJwtResponse(response.credential);
-      console.log("Google 사용자 정보:", responsePayload);
-      
-      // 백엔드로 Google 로그인 데이터 전송
-      const loginData = {
-        oauthProvider: 'google',
-        oauthId: responsePayload.sub,
-        email: responsePayload.email,
-        nickName: responsePayload.name,
-        profImg: responsePayload.picture
-      };
-
-      // 백엔드 API 호출
-      const response = await fetch('http://localhost:3001/auth/google', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(loginData)
-      });
-
-      const result = await response.json();
-      
-      if (response.ok) {
-        console.log('로그인 성공:', result);
-        // 토큰을 localStorage에 저장
-        localStorage.setItem('token', result.token);
-        localStorage.setItem('user', JSON.stringify(result.user));
-        // 홈페이지로 리다이렉트
-        window.location.href = '/';
-      } else {
-        console.error('로그인 실패:', result);
-        alert('로그인에 실패했습니다. 다시 시도해주세요.');
-      }
-      
-    } catch (error) {
-      console.error('Google 로그인 오류:', error);
-      alert('로그인 중 오류가 발생했습니다.');
-    }
-  }
-
-  // Google 아이콘 클릭 시 Google 로그인 실행
-  const handleGoogleLogin = () => {
-    if (window.google) {
-      window.google.accounts.id.prompt();
-    }
-  };
-
-  useEffect(() => {
-    // Google Sign-In 초기화
-    if (window.google) {
-      window.google.accounts.id.initialize({
-        client_id:
-          "985549267807-mu62klcok2e4q3su4qbfqklmb0n5b990.apps.googleusercontent.com", // 실제 Google Client ID로 변경
-        callback: handleCredentialResponse,
-      });
-    }
-  }, []);
 
   return (
     <div className="login-page">
@@ -100,7 +111,7 @@ export default function Login() {
         {/* 숨겨진 Google Sign-In 초기화 */}
         <div
           id="g_id_onload"
-          data-client_id="YOUR_GOOGLE_CLIENT_ID"
+          data-client_id="985549267807-mu62klcok2e4q3su4qbfqklmb0n5b990.apps.googleusercontent.com"
           data-context="signin"
           data-ux_mode="popup"
           data-callback="handleCredentialResponse"
@@ -110,6 +121,14 @@ export default function Login() {
 
         <div className="social-login-buttons">
           <button className="social-btn" onClick={handleGoogleLogin}>
+            {/* <img src={googleIcon} alt="구글 로그인" /> */}
+          </button>
+          <div id="googleSignInDiv"></div>
+
+         
+        </div>
+        {/* <div className="social-login-buttons">
+          <button className="social-btn" onClick={handleGoogleLogin}>
             <img src={googleIcon} alt="구글 로그인" />
           </button>
           <button className="social-btn">
@@ -118,7 +137,7 @@ export default function Login() {
           <button className="social-btn">
             <img src={kakaoIcon} alt="카카오 로그인" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -309,3 +309,40 @@ info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:32.423Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:30.464Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:34.775Z"}
+error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:13:28.573Z"}
+error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:13:35.070Z"}
+error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:20:32.778Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T05:22:16.501Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T05:22:36.094Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T05:22:39.109Z"}
+info: GET / - 404 (6ms) {"timestamp":"2025-07-28T05:46:26.227Z"}
+info: GET /favicon.ico - 404 (7ms) {"timestamp":"2025-07-28T05:46:26.258Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T05:53:04.476Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T05:53:20.875Z"}
+info: GET / - 404 (5ms) {"timestamp":"2025-07-28T06:00:04.194Z"}
+info: GET /favicon.ico - 404 (1ms) {"timestamp":"2025-07-28T06:00:04.212Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:37:56.689Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:45:44.973Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:48:25.787Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:48:43.470Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:48:44.838Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:48:46.028Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:50:25.103Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:52:17.862Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T06:55:38.026Z"}
+info: OPTIONS /auth/google - 204 (3ms) {"timestamp":"2025-07-28T06:57:09.659Z"}
+info: POST /google - 201 (35ms) {"timestamp":"2025-07-28T06:57:09.695Z"}
+info: OPTIONS /auth/google - 204 (1ms) {"timestamp":"2025-07-28T06:58:41.447Z"}
+info: POST /google - 200 (15ms) {"timestamp":"2025-07-28T06:58:41.472Z"}
+info: OPTIONS /auth/google - 204 (1ms) {"timestamp":"2025-07-28T07:00:41.605Z"}
+info: POST /google - 200 (14ms) {"timestamp":"2025-07-28T07:00:41.621Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:10:02.315Z"}
+info: GET / - 404 (5ms) {"timestamp":"2025-07-28T07:10:13.205Z"}
+info: GET / - 404 (1ms) {"timestamp":"2025-07-28T07:10:16.252Z"}
+info: OPTIONS /auth/google - 204 (1ms) {"timestamp":"2025-07-28T07:22:44.280Z"}
+info: POST /google - 201 (38ms) {"timestamp":"2025-07-28T07:22:44.319Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:24.158Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:26.814Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:34.892Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:42.858Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:46.773Z"}

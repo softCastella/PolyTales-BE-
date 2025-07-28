@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const progressController = require('../controllers/progressController');
+const progressController = require('../controllers/progress');
 
 // 진도 저장(POST)
 router.post('/progress', progressController.saveProgress);
