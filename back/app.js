@@ -8,10 +8,13 @@ const path = require("path");
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 
-const authRouter = require("./src/routes/auth");
-const notesRouter = require("./src/routes/notes");
-const storiesRouter = require("./src/routes/stories"); // 새로 추가
-const progressRouter = require("./src/routes/progress"); // 진행 상황 라우터 추가
+const authRouter = require("./src/routes/auth");           // 인증 관련 라우터
+const notesRouter = require("./src/routes/notes");         // 노트 라우터
+const storiesRouter = require("./src/routes/stories");     // 컨텐츠 라우터
+const progressRouter = require("./src/routes/progress");   // 진행 상황 라우터 추가
+const usersRouter = require("./src/routes/users");         // 사용자 라우터 추가
+const languagesRouter = require("./src/routes/languages"); // 언어 라우터 추가
+
 const models = require("./src/models");
 const { logger, logging } = require("./src/middlewares/logger");
 
@@ -32,6 +35,8 @@ app.use("/auth", authRouter); // 인증 관련 라우터
 app.use("/notes", notesRouter);  // 노트 라우터 추가
 app.use("/progress", progressRouter); // 진행 상황 라우터 추가
 app.use("/stories", storiesRouter); // 스토리 라우터 추가
+app.use("/users", usersRouter); // 사용자 라우터 추가
+app.use("/languages", languagesRouter); // 언어 라우터 추가
 
 // Swagger 설정
 const swaggerDocument = YAML.load(path.join(__dirname, "swagger.yaml"));
@@ -63,9 +68,9 @@ const PORT = process.env.PORT || 3000; // 포트 설정
 async function startServer() {
   try {
     // 1. 먼저 DB 연결 및 동기화
-    await models.sequelize.sync({ force: false });
+    await models.sequelize.sync({ force: false, alter: false });
     console.log("✅ DB connected successfully");
-    
+
     // 2. DB 연결 성공 후 서버 시작
     app.listen(PORT, () => {
       logger.info(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);

@@ -1,4 +1,9 @@
-//시퀄라이즈 컨벤션 : 엔터티: 대문자시작/테이블명: 복수형 소문자 카멜
+// Progress(진도) 모델 - 학습 진도/완주/프로그레스바 계산에 최적화
+//currentPage: 사용자가 마지막으로 본 페이지(프레임) 번호
+//totalPage: 전체 페이지 수(프론트에서 전달받거나, 스토리에서 참조)
+//isFinished: 완주 여부(모든 페이지를 다 보면 true)
+//updatedAt: 마지막 진도 저장 시각
+
 module.exports = (sequelize, DataTypes) => {
     const Progress = sequelize.define(
         "Progress",
@@ -10,12 +15,20 @@ module.exports = (sequelize, DataTypes) => {
             },
             userId: {
                 type: DataTypes.INTEGER,
+                allowNull: false
             },
             storyId: {
                 type: DataTypes.INTEGER,
+                allowNull: false
             },
             currentPage: {
                 type: DataTypes.INTEGER,
+                allowNull: false,
+                defaultValue: 1 // 최소 1페이지부터 시작
+            },
+            totalPage: {
+                type: DataTypes.INTEGER,
+                allowNull: false
             },
             isFinished: {
                 type: DataTypes.BOOLEAN,
@@ -24,10 +37,10 @@ module.exports = (sequelize, DataTypes) => {
             updatedAt: {
                 type: DataTypes.DATE,
                 defaultValue: DataTypes.NOW
-            },
+            }
         },
         {
-            tableName: "Progresses",
+            tableName: "progresses",
             timestamps: false,
         }
     );
@@ -47,4 +60,3 @@ module.exports = (sequelize, DataTypes) => {
     };
     return Progress;
 };
-

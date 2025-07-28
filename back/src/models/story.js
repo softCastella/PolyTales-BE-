@@ -21,17 +21,22 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(20),
                 allowNull: false
             },
-            nation: {
-                type: DataTypes.ENUM('fr', 'ja', 'es', 'en', 'de', 'ko'),
-                allowNull: false
-            },
             topic: {
                 type: DataTypes.STRING(100),
                 allowNull: false
-            }
+            },
+            StoryCoverPath: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            },
+            totalPages: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                defaultValue: 10
+            },
         },
         {
-            tableName: "Stories",
+            tableName: "stories",
             timestamps: true // createdAt, updatedAt 사용
         }
     );
@@ -43,6 +48,6 @@ module.exports = (sequelize, DataTypes) => {
             as: "languages"
         });
     };
-    
+
     return Story;
 };

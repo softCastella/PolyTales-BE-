@@ -6,9 +6,14 @@ const router = express.Router();
 const authController = require("../controllers/auth");
 
 // http://localhost:3000/auth/register
-router.post("/register", authController.register);
 
-// http://localhost:3000/auth/login
-router.post('/login', authController.login);
+//SNS간편 가입/로그인
+router.post("/auth/google", authController.googleAuth);
+router.post("/auth/naver", authController.register);
+router.post("/auth/kakao", authController.register);
+
+
+// // http://localhost:3000/auth/login
+// router.post('/login', authController.login);
 
 module.exports = router;

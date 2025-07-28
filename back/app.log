@@ -136,7 +136,6 @@ info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":
 info: GET / - 404 (9ms) {"timestamp":"2025-07-24T12:36:10.127Z"}
 info: GET /favicon.ico - 404 (6ms) {"timestamp":"2025-07-24T12:36:10.314Z"}
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-24T12:43:10.587Z"}
-<<<<<<< HEAD
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-25T01:42:10.415Z"}
 info: 서버가 http://localhost:3000 에서 실행 중 입니다. {"timestamp":"2025-07-25T02:06:22.611Z"}
 info: GET / - 404 (5ms) {"timestamp":"2025-07-25T02:13:42.563Z"}
@@ -207,8 +206,6 @@ error: Server startup failed {"error":"database \"agelin\" does not exist","time
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:16:22.794Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:17:00.037Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T04:24:09.167Z"}
-=======
->>>>>>> 8b2bde9285343de62ec5a0f6f61258ab2d278bc3
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:05:32.392Z"}
 error: Server startup failed {"error":"role \"postgres\" does not exist","timestamp":"2025-07-25T05:06:09.803Z"}
 error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-25T05:06:54.795Z"}
@@ -226,3 +223,89 @@ info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:38.621Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:16:50.354Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-25T06:17:25.347Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:15:14.556Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:29:39.203Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:44:42.654Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:44:44.601Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:00.627Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:03.650Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:11.010Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:15.502Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:22.590Z"}
+error: Server startup failed {"error":"\"polytales_dev\" �����ͺ��̽� ����","timestamp":"2025-07-26T14:45:27.298Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:05:28.503Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:05:32.098Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:05:36.117Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:05:38.392Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:08:59.005Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:09:02.957Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:09:09.001Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:09:16.685Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:09:23.655Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:10:05.928Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:10:15.573Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:10:28.455Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:10:40.387Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:10:55.459Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:11:13.981Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:11:23.420Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:11:34.059Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:11:42.456Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:11:49.799Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:21:51.044Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:22:16.742Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:22:40.906Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:22:51.584Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:23:00.990Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:23:16.749Z"}
+error: Server startup failed {"error":"\"Stories\" 이름의 릴레이션(relation)이 없습니다","timestamp":"2025-07-26T15:23:25.105Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T04:46:43.874Z"}
+info: GET / - 404 (12ms) {"timestamp":"2025-07-27T04:59:52.832Z"}
+info: GET /favicon.ico - 404 (4ms) {"timestamp":"2025-07-27T04:59:52.938Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:09:37.603Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:22:33.161Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:31:18.562Z"}
+error: Server startup failed {"error":"\"users_oauth_provider_oauth_id\" 이름의 릴레이션(relation)이 이미 있습니다","timestamp":"2025-07-27T05:41:45.131Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:43:21.184Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:43:42.654Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:56:00.734Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:57:21.578Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T05:57:51.013Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:43.332Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:46.782Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:53.614Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:26:57.768Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:27:25.382Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:27:32.235Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:39:52.851Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:39:57.607Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:00.831Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:04.786Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:12.337Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:15.567Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:28.090Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:34.922Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:41.573Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:49.420Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:52.359Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:40:54.579Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:02.179Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:10.352Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:14.191Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:17.415Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:25.023Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:27.758Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:41:47.961Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:11.145Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:15.127Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:26.232Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:43.176Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:47.863Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:50.467Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:42:52.923Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:45:37.119Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:18.340Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:27.519Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:32.423Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:30.464Z"}
+info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:34.775Z"}

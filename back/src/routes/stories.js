@@ -10,6 +10,6 @@ router.get('/stories', storiesController.getStories);
 router.get('/stories/:id', storiesController.getStoryById);
 
 // GET /stories/level/:level - 레벨별 스토리
-router.get('/stories?level=:level', storiesController.getStoryByLevel);
+router.get('/stories/level/:level', storiesController.getStoryByLevel);
 
 module.exports = router;

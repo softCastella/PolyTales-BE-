@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         {
-            tableName: "Languages",
+            tableName: "languages",
             timestamps: false, // createdAt, updatedAt 없음
             indexes: [ // ✅ PostgreSQL 성능 최적화
                 {
