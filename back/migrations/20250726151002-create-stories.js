@@ -25,10 +25,6 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false
       },
-      imgUrl: {           // 이미지 URL
-        type: Sequelize.STRING,
-        allowNull: true
-      },
       totalPages: {                // 전체 페이지 수
         type: Sequelize.INTEGER,
         allowNull: false,
