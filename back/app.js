@@ -15,16 +15,6 @@ const progressRouter = require("./src/routes/progress");   // 진행 상황 라�
 const usersRouter = require("./src/routes/users");         // 사용자 라우터 추가
 const languagesRouter = require("./src/routes/languages"); // 언어 라우터 추가
 
-<<<<<<< HEAD
-=======
-const authRouter = require("./src/routes/auth");           // 인증 관련 라우터
-const notesRouter = require("./src/routes/notes");         // 노트 라우터
-const storiesRouter = require("./src/routes/stories");     // 컨텐츠 라우터
-const progressRouter = require("./src/routes/progress");   // 진행 상황 라우터 추가
-const usersRouter = require("./src/routes/users");         // 사용자 라우터 추가
-const languagesRouter = require("./src/routes/languages"); // 언어 라우터 추가
-
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
 const models = require("./src/models");
 const { logger, logging } = require("./src/middlewares/logger");
 
@@ -80,11 +70,7 @@ const PORT = process.env.PORT || 3000; // 포트 설정
 async function startServer() {
   try {
     // 1. 먼저 DB 연결 및 동기화
-<<<<<<< HEAD
     await models.sequelize.sync({ force: true });
-=======
-    await models.sequelize.sync({ force: false, alter: false });
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
     console.log("✅ DB connected successfully");
 
     // 2. DB 연결 성공 후 서버 시작

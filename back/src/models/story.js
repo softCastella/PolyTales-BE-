@@ -25,11 +25,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
-<<<<<<< HEAD
             StoryCoverPath: {
-=======
-            imgUrl: {
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
                 type: DataTypes.TEXT,
                 allowNull: false
             },

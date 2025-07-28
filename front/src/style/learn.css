@@ -403,7 +403,6 @@ body {
   resize: none;
   font-size: 0.9rem;
   border: none;
-<<<<<<< HEAD
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: #fefef8;
@@ -411,9 +410,6 @@ body {
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center center;
-=======
-  background: transparent;
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
   font-family: 'Noto Sans KR', sans-serif;
   color: #444;
   box-sizing: border-box;

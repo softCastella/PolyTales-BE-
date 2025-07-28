@@ -1,10 +1,6 @@
 const express = require('express');
 const router = express.Router();
-<<<<<<< HEAD
 const progressController = require('../controllers/progress');
-=======
-const progressController = require('../controllers/progressController');
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
 
 // 진도 저장(POST)
 router.post('/progress', progressController.saveProgress);

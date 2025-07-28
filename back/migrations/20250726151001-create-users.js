@@ -27,12 +27,7 @@ module.exports = {
             },
             profImg: {                    // 프로필 이미지
                 type: Sequelize.TEXT,
-<<<<<<< HEAD
                 allowNull: true
-=======
-                allowNull: true,
-                defaultValue: '/style/img/contents/lily_1.jpg',
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
             },
             gender: {                       // 성별
                 type: Sequelize.ENUM('male', 'female'),
@@ -53,8 +48,4 @@ module.exports = {
         await queryInterface.dropTable('users');
         await queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_users_oauthProvider";');
     }
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
