@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 references: { // ✅ PostgreSQL 외래키 명시
-                    model: 'Stories',
+                    model: 'stories',
                     key: 'storyId'
                 },
                 onUpdate: 'CASCADE', // ✅ 추가

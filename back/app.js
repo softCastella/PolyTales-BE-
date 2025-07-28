@@ -7,7 +7,7 @@ const path = require("path");
 
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
-
+const { sequelize, Story, Language } = require('./src/models');
 const authRouter = require("./src/routes/auth");           // 인증 관련 라우터
 const notesRouter = require("./src/routes/notes");         // 노트 라우터
 const storiesRouter = require("./src/routes/stories");     // 컨텐츠 라우터
@@ -23,13 +23,15 @@ const uploadDir = `public/uploads`;
 app.use(logging); // 로깅 미들웨어
 // 미들웨어 설정 (반드시 express.json()이나 라우터보다 위에 위치해야 합니다.)
 app.use(cors({
-  origin: 'http://localhost:3001',           // 프론트엔드 주소
-  credentials: true,                         // 인증 정보 포함 허용
-  exposedHeaders: ['Authorization']          // 응답 헤더에서 Authorization 허용
+  origin: ['http://localhost:3001'],
+  credentials: true,
+  exposedHeaders: ['Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true}));
 
 app.use("/auth", authRouter); // 인증 관련 라우터
 app.use("/notes", notesRouter);  // 노트 라우터 추가
@@ -68,7 +70,7 @@ const PORT = process.env.PORT || 3000; // 포트 설정
 async function startServer() {
   try {
     // 1. 먼저 DB 연결 및 동기화
-    await models.sequelize.sync({ force: false, alter: false });
+    await models.sequelize.sync({ force: true });
     console.log("✅ DB connected successfully");
 
     // 2. DB 연결 성공 후 서버 시작

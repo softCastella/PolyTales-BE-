@@ -103,3 +103,13 @@ FOREIGN KEY (userId) REFERENCES User(userId),
 FOREIGN KEY (storyId) REFERENCES Story(storyId)
 );
 
+# 간편 sns 토큰 헤더 증량
+cd /Users/agelin/FullStackWeb/React/PolyTales\(BE\)/back && cat > nodemon.json << 'EOF'
+{
+  "exec": "node --max-http-header-size=32768 app.js",
+  "watch": ["src", "app.js"],
+  "ext": "js,json",
+  "ignore": ["node_modules", "logs", "public/uploads"]
+}
+EOF
+파일 작성후, npx nodemon 또는 npm run server 로 백서버 실행
