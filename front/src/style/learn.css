@@ -24,6 +24,63 @@ body {
 /* 헤더 */
 .div1 {
   grid-area: 1 / 1 / 2 / 4;
+<<<<<<< HEAD
+=======
+  background: #FFFAC7;
+  border-radius: 12px;
+}
+
+.div2 {
+  grid-area: 1 / 4 / 2 / 13;
+  background: #fffac7;
+  display: flex;
+  border-radius: 12px;
+}
+
+.div3 {
+  grid-area: 2 / 1 / 4 / 6;
+  margin: 10px 20px 0 20px;
+  border-radius: 12px;
+}
+
+.div4 {
+  grid-area: 4 / 1 / 5 / 5;
+  background: #FEFBE0;
+  margin: 10px 20px 0 20px;
+  border-radius: 12px;
+}
+
+.div5 {
+  grid-area: 2 / 6 / 3 / 9;
+  background: #DBE9D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 10px 20px 0 20px;
+  border-radius: 12px;
+}
+
+.div6 {
+  grid-area: 4 / 5 / 5 / 9;
+  background: #FEFBE0;
+  margin: 10px 20px 0 20px;
+  border-radius: 12px;
+}
+
+.div7 {
+  grid-area: 3 / 6 / 4 / 9;
+  background: #F6F6F6;
+  margin: 10px 20px 0 20px;
+  border-radius: 12px;
+}
+
+.div8 {
+  grid-area: 2 / 9 / 5 / 13;
+  background: #F6F6F6;
+  margin: 10px 20px 0 20px;
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
   border-radius: 12px;
 }
 
@@ -131,11 +188,15 @@ body {
   padding: 0;
   background-color: #5F5C5C;
   color: white;
+<<<<<<< HEAD
 }
 
 .pause img {
   width: 18px;
   height: 18px;
+=======
+  background-color: #5F5C5C;
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
 }
 
 .progress-bar {
@@ -326,8 +387,12 @@ body {
   margin-left: 50px;
 }
 
+<<<<<<< HEAD
 .note-input::placeholder {
   background-color: #fefef8;
+=======
+.memo-input::placeholder {
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
   color: #3F3F3F;
   font-weight: normal;
 }
@@ -338,6 +403,7 @@ body {
   resize: none;
   font-size: 0.9rem;
   border: none;
+<<<<<<< HEAD
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: #fefef8;
@@ -345,6 +411,9 @@ body {
   background-size: 60px 60px;
   background-repeat: no-repeat;
   background-position: center center;
+=======
+  background: transparent;
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
   font-family: 'Noto Sans KR', sans-serif;
   color: #444;
   box-sizing: border-box;
@@ -387,9 +456,38 @@ body {
   border-radius: 3px;
 }
 
+<<<<<<< HEAD
 .note-content::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 3px;
+=======
+.chat-instruction {
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+  padding-bottom: 2rem;
+}
+
+.chat-send {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+  }
+  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    grid-column: 1 / -1;
+    margin: 0 8px;
+  }
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
 }
 .note-content::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;

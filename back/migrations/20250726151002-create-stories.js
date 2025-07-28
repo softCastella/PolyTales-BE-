@@ -25,10 +25,13 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false
       },
+<<<<<<< HEAD
       imgUrl: {           // 이미지 URL
         type: Sequelize.STRING,
         allowNull: true
       },
+=======
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
       totalPages: {                // 전체 페이지 수
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -43,4 +46,8 @@ module.exports = {
     await queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_stories_langLevel";');
     await queryInterface.sequelize.query('DROP TYPE IF EXISTS "enum_stories_nation";');
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3

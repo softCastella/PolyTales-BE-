@@ -309,6 +309,7 @@ info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:46:32.423Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:30.464Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-27T06:48:34.775Z"}
+<<<<<<< HEAD
 error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:13:28.573Z"}
 error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:13:35.070Z"}
 error: Server startup failed {"error":"relation \"Stories\" does not exist","timestamp":"2025-07-28T05:20:32.778Z"}
@@ -346,3 +347,5 @@ info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:34.892Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:42.858Z"}
 info: 서버가 http://localhost:3000 에서 실행 중입니다. {"timestamp":"2025-07-28T07:27:46.773Z"}
+=======
+>>>>>>> a27df77fd646921950b87dad19bf37c64c6086b3
