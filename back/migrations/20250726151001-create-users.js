@@ -27,7 +27,8 @@ module.exports = {
             },
             profImg: {                    // 프로필 이미지
                 type: Sequelize.TEXT,
-                allowNull: true
+                allowNull: true,
+                defaultValue: '/style/img/contents/lily_1.jpg',
             },
             gender: {                       // 성별
                 type: Sequelize.ENUM('male', 'female'),
