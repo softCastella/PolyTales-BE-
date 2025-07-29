@@ -15,7 +15,6 @@
   border: none;
   padding: 0.5rem 0.5rem;
   border-radius: 50%;
-
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
@@ -23,16 +22,22 @@
 }
 
 /* 전체 배경 및 여백 */
-.mypage-container {
-  position: flex;
-  top: var(--header-height);
-  bottom: var(--footer-height);
-  left: 0;
-  right: 0;
+.main-content {
   overflow-y: auto;
-  padding: 5rem 8rem;
+  /* padding: 2rem; */
+  background-color: var(--main-bg);
+  height: 100vh;
+}
+
+.mypage-container {
+
+  position: relative;
+  padding: 5.5rem 10rem 2rem 10rem;
+  /* 상단 패딩만 늘림 */
   background-color: #fff;
   box-sizing: border-box;
+  min-height: 100vh;
+  /* 최소 높이를 화면 전체로 설정 */
 }
 
 /* 컨텐츠 영역 전체 레이아웃 */
@@ -40,17 +45,23 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  justify-content: center;
+
 }
 
 /*프로필박스 영역*/
 .profile-box {
   background-color: #f7f7f7;
   border-radius: 20px;
-  flex: 0.7; /* 프로필 영역을 1배로 */
-  max-width: 400px; /* 더 넓게, 필요시 제거 */
-  min-width: 300px; /* 최소 너비 지정 */
-  height: 470px;
-  padding:  30px 40px;
+  flex: 0.7;
+  /* 프로필 영역을 1배로 */
+  max-width: 330px;
+  /* 더 넓게, 필요시 제거 */
+  min-width: 300px;
+  /* 최소 너비 지정 */
+  margin-top: 0;
+  height: 520px;
+  padding: 20px 40px;
   text-align: center;
 }
 
@@ -79,7 +90,7 @@
 }
 
 .profile-name {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 b {
@@ -100,7 +111,7 @@ b {
 
 .report-btn,
 .plan-btn {
-  width: 280px;
+  width: 230px;
   height: 40px;
   background-color: #67b98a;
   border: none;
@@ -111,11 +122,6 @@ b {
   margin: 0 auto;
 }
 
-.contents-list-wrap {
-  flex: 2; /* 컨텐츠 영역을 2배로 */
-  max-width: 900px; /* 이미지 3.5개 정도만 보이게 */
-  min-width: 0;
-}
 
 .exit {
   margin-top: 25px;
@@ -129,40 +135,114 @@ b {
 }
 
 .read-header,
-.bookmark-header{
+.bookmark-header {
   display: flex;
-  gap: 39rem
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  /* gap: 39rem;  <= 이 줄을 삭제 */
+  justify-content: space-between;
+  /* 이 줄 추가 */
 }
 
-.read-title{
+.bookmark-header {
+  margin-top: 30px;
+}
+
+.read-title {
   /* margin-top: 0px; */
   margin: 0;
 }
 
-.bookmark-title{
-  margin-top:30px;
-  margin-bottom:0
-
+.bookmark-title {
+  margin-top: 0px;
+  margin-bottom: 0
 }
 
 .read-title,
-.bookmark-title{
+.bookmark-title {
   color: #3a3a3aad;
   padding: 0;
 }
 
-.more-btn{
+.more-btn {
   background-color: transparent;
   padding: 0;
-  max-width: 40px; /* 더 넓게, 필요시 제거 */
-  min-width: 40px; /* 최소 너비 지정 */
+  max-width: 40px;
+  /* 더 넓게, 필요시 제거 */
+  min-width: 40px;
+  /* 최소 너비 지정 */
   height: 40px;
   border: none;
   color: gray;
   cursor: pointer;
 }
 
-hr{
+hr {
   border-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px ;
+  margin-bottom: 20px;
 }
+
+/* 이미지 그리드 레이아웃 */
+.contents-list-wrap {
+  flex: 2;
+  width: 100%;         
+  max-width: 900px;
+  min-width: 800px;
+  /* min-width: 0; */
+
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 한 줄에 4개 */
+   gap: 1rem; /*이미지 사이 여백, 필요시 조절 */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* max-width: 200px; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.book-cover,
+.read-book-img,
+.bookmark-book-img {
+  width: 100%;
+  height: auto;
+  /* max-width: 200px; */
+  /* 필요시 조절 */
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+
+}
+
+.image-title {
+  font-size: 0.9rem; /* 크기 약간 줄임 */
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* max-width 대신 100% */
+  line-height: 1.3; /* 줄 간격 조정 */
+}
+  /* font-size: 1rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; */
+/* } */

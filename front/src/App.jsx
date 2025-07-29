@@ -10,6 +10,7 @@ import Learn from "./pages/Learn";
 import Login from "./pages/Login";
 import Mypage from "./pages/Mypage";
 import Bookmark from "./pages/Bookmark";
+import BookCarousel from "./pages/BookCarousel";
 import History from "./pages/History";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/mypage" element={<Mypage />} />
             <Route path="/history" element={<History />} />
             <Route path="/bookmark" element={<Bookmark />} />
+            <Route path="/bookcarousel" element={<BookCarousel />} />
           </Route>
 
           {/* 헤더/푸터 없음 */}

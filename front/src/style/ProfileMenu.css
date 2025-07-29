@@ -84,6 +84,7 @@
 /* 버튼 컨테이너 */
 .profile-dropdown .button-container {
   display: flex;
+  flex-direction: row;;
   gap: 15px;
   width: 100%;
 }

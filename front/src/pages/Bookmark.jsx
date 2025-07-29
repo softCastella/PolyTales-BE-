@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "../style/Bookmark.css";
 import Lilyshappyday from "../style/img/home/Lilyshappyday.png";
 import sampleImg from "../style/img/home/sample.png";
+import "../style/Bookmark.css";
 
 const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
 

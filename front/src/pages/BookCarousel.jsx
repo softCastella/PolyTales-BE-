@@ -1,14 +1,9 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext"; // 구글 로그인 정보 context
-import "../style/Mypage.css";
+import { AuthContext } from "../context/AuthContext";
+import "../style/BookCarousel.css";
 import Lilyshappyday from "../style/img/home/Lilyshappyday.png";
 import ProfImg from "../style/img/login/ProfImg.png";
-// import RedRidinghood from "../style/img/home/RedRidinghood.png";
-// import MyDiary from "../style/img/home/MyDiary.png";
-// import LittlePrince from "../style/img/home/LittlePrince.png";
-// import Fighters from "../style/img/home/Fighters.png";
-// import Pizzaria from "../style/img/home/Pizzaria.png";
 
 export default function Mypage() {
   const navigate = useNavigate();
@@ -16,21 +11,25 @@ export default function Mypage() {
 
   // 예시 데이터
   const readBooks = [
-    { id: 1, title: "Lily's happy day", img: Lilyshappyday },
-    { id: 2, title: "Lily's happy day", img: Lilyshappyday },
-    { id: 3, title: "Lily's happy day", img: Lilyshappyday },
-    { id: 4, title: "Lily's happy day", img: Lilyshappyday },
-  ];
-  const likedBooks = [
-    { id: 4, title: "Lily's happy day", img: Lilyshappyday },
-    { id: 5, title: "Lily's happy day", img: Lilyshappyday },
-    { id: 6, title: "Lily's happy day", img: Lilyshappyday },
+    { id: 1, title: "Lily's happy dayLily's happy day", img: Lilyshappyday },
+    { id: 2, title: "Red Ridinghood", img: Lilyshappyday },
+    { id: 3, title: "My diary", img: Lilyshappyday },
+    { id: 4, title: "The Little Prince", img: Lilyshappyday },
+    { id: 5, title: "Fighters", img: Lilyshappyday },
+    { id: 6, title: "Another Book", img: Lilyshappyday },
   ];
 
-  // 회원탈퇴 예시 함수 (실제 구현에 맞게 수정)
+  const likedBooks = [
+    { id: 4, title: "Lily's happy day", img: Lilyshappyday },
+    { id: 5, title: "Red Ridinghood", img: Lilyshappyday },
+    { id: 6, title: "My diary", img: Lilyshappyday },
+    { id: 7, title: "The Little Prince", img: Lilyshappyday },
+    { id: 8, title: "Fighters", img: Lilyshappyday },
+  ];
+
   const handleWithdraw = async () => {
-    if (!window.confirm("정말로 회원 탈퇴하시겠습니까?")) return;
-    // ...API 호출 및 onLogout()
+    if (!window.confirm("정말로 회원 탈퇴하시겠습니까?")) 
+      return;
     alert("탈퇴 기능이 준비 중입니다. 로그아웃 처리합니다.");
     onLogout();
   };
@@ -50,7 +49,7 @@ export default function Mypage() {
           <div className="profile-box">
             <p className="join-date">가입일 : {user?.joinDate || "2025-07-07"}</p>
             <img
-              src={user?.profImg || ProfImg} // 구글 프로필 이미지 > 기본이미지
+              src={user?.profImg || ProfImg}
               alt="profile-image"
               className="profile-img-big"
             />
@@ -60,13 +59,14 @@ export default function Mypage() {
             </div>
             <div className="profile-email">{user?.email}</div>
             <div className="button-container">
-              <button className="report-btn">학습 정보</button>
-              <button className="plan-btn">구독 이력</button>
+              <button className="report-btn" onClick={() => navigate("/report")}>학습 정보</button>
+              <button className="plan-btn" onClick={() => navigate("/plan")}>구독 이력</button>
             </div>
             <button className="exit" onClick={handleWithdraw}>
               회원 탈퇴
             </button>
           </div>
+
           {/* 오른쪽: 책 리스트 */}
           <div className="contents-list-wrap">
             <div className="read-book">
@@ -75,26 +75,33 @@ export default function Mypage() {
                 <button className="more-btn" onClick={() => navigate("/history")}>더보기</button>
               </div>
               <hr />
-              <div className="image-grid">
-                {readBooks.map(({ id, title, img }) => (
-                  <div key={id} className="image-box">
-                    <img  className="book-cover"  src={img} alt={title} />
-                    <p className="image-title">{title}</p>
+              {/* 캐러셀로 변경 */}
+              <div className="book-carousel">
+                {readBooks.map((book) => (
+                  <div key={book.id} className="book-card">
+                    <div className="book-cover-wrapper">
+                      <img className="book-cover-img" src={book.img} alt={book.title} />
+                    <div className="book-title">{book.title}</div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
+
             <div className="book-marked">
               <div className="bookmark-header">
                 <h2 className="bookmark-title">내가 찜한 책들</h2>
                 <button className="more-btn" onClick={() => navigate("/bookmark")}>더보기</button>
               </div>
               <hr />
-              <div className="image-grid">
-                {likedBooks.map(({ id, title, img }) => (
-                  <div key={id} className="image-box">
-                    <img  className="book-cover" src={img} alt={title} />
-                    <p className="image-title">{title}</p>
+              {/* 캐러셀로 변경 */}
+              <div className="book-carousel">
+                {likedBooks.map((book) => (
+                  <div key={book.id} className="book-card">
+                    <div className="book-cover-wrapper">
+                      <img className="book-cover-img" src={book.img} alt={book.title} />
+                    </div>
+                    <div className="book-title">{book.title}</div>
                   </div>
                 ))}
               </div>

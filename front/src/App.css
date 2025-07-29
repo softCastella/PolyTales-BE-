@@ -19,7 +19,7 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;           /* 최상위 스크롤 제거 */
+  /* overflow: hidden;           최상위 스크롤 제거 */
 }
 
 /* 3. 그리드 레이아웃 설정: 헤더 / 본문 / 푸터 */
