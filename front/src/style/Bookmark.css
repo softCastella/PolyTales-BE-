@@ -1,24 +1,60 @@
-/* src/style/home.css */
-
-/* Home 페이지 주요 콘텐츠 영역: 헤더/푸터 제외한 전체 바디 스크롤 */
-.recommend-section {
-  position: absolute;
+.bookmark-container {
+  position: fixed;
   top: var(--header-height);
   bottom: var(--footer-height);
   left: 0;
   right: 0;
   overflow-y: auto;
-  padding: 2rem;
-  background-color: var(--main-bg);
-  text-align: center;
+  padding: 1rem 8rem;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
-.recommend-section h2 {
-  font-size: 1.8rem;
-  color: #67b98aeb;
-  margin-bottom: 2rem;
+.back-button-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 7px;
+  margin-left: 0.2rem;
+  margin-bottom: 1rem;
+ 
+  align-items: center; /* 추가 */
+  height: auto; /* 필요시 추가 */
 }
 
+.back-button {
+  background-color: #fea270ad;
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  margin-top: 10px;
+   margin-right: 0.5rem;
+   margin-bottom: 1rem;
+  padding: 3px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-width: none;
+  min-height: ; */
+}
+
+.page-title{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+  color: #6c6c6c;
+  font-size: 25px;
+}
+
+/* src/style/home.css */
+
+/* Home 페이지 주요 콘텐츠 영역: 헤더/푸터 제외한 전체 바디 스크롤 */
 .level-buttons {
   display: flex;
   flex-wrap: wrap;

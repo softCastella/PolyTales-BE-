@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../style/home.css';
+import '../style/Home.css';
 import Lilyshappyday from '../style/img/home/Lilyshappyday.png';
 import sampleImg from '../style/img/home/sample.png';
 
@@ -18,7 +18,7 @@ const levelLabelsKo = {
 
 const imageData = [
   { id: 1, title: "Lily's happy day", level: 'A1', available: true },
-  { id: 2, title: 'Red', level: 'A1', available: false },
+  { id: 2, title: 'Red Riding Hood', level: 'A1', available: false },
   { id: 3, title: 'Diary', level: 'A1', available: false },
   { id: 4, title: 'Friendship', level: 'A1', available: false },
   { id: 5, title: 'Prince', level: 'A1', available: false },
