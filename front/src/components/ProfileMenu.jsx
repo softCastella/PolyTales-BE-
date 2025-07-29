@@ -62,30 +62,4 @@ export default function ProfileMenu({
   );
 }
 
-// 회원탈퇴 처리 함수
-// const handleWithdraw = async () => {
-//     if (!window.confirm("정말로 회원 탈퇴하시겠습니까?")) return;
-//     const token = localStorage.getItem("token");
-//     // DELETE /users/:id 소프트 딜리트 API 호출
-//     try{
-//     const res = await fetch(`http://localhost:3001/users/${userId}`, {
-//         method: "DELETE",
-//         headers: {
-//             "Content-Type": "application/json",
-//             "Authorization": `Bearer ${token}`
-//         }
-//     });
 
-//     if (res.ok) {
-//             alert("회원 탈퇴가 완료되었습니다.");
-//             onLogout(); // 기존 logout 함수 사용
-//         } else {
-//             alert("탈퇴 처리 중 오류가 발생했습니다.");
-//         }
-//     } catch (error) {
-//         console.error("회원탈퇴 오류:", error);
-//         // 백엔드 API가 없을 경우 단순 로그아웃
-//         alert("탈퇴 기능이 준비 중입니다. 로그아웃 처리합니다.");
-//         onLogout();
-//     }
-// };

@@ -48,7 +48,7 @@ export default function History() {
     ? imageData.filter((item) => item.level === selected) : [];
 
   return (
-    <div className="mypage-container">
+    <div className="history-container">
       <div className="back-button-wrapper">
         <button className="back-button" onClick={goBack}>
           🔙

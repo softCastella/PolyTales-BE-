@@ -20,15 +20,15 @@ function App() {
           {/* 헤더 + 푸터 포함 */}
           <Route element={<MainRouter />}>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/mypage" element={<Mypage />} />
-            <Route path="/bookmark" element={<Bookmark />} />
-            <Route path="/history" element={<History />} />
           </Route>
 
           {/*  헤더만 포함 */}
           <Route element={<DetailRouter />}>
+            <Route path="/login" element={<Login />} />
             <Route path="/detail" element={<Detail />} />
+            <Route path="/mypage" element={<Mypage />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/bookmark" element={<Bookmark />} />
           </Route>
 
           {/* 헤더/푸터 없음 */}
