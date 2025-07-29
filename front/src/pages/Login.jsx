@@ -1,15 +1,21 @@
 import "../style/Login.css";
 import logo from "../style/img/login/loginLogo.png";
+
 // import googleIcon from "../style/img/login/google.png";
 import naverIcon from "../style/img/login/naver.png";
 import kakaoIcon from "../style/img/login/kakao.png";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 export default function Login() {
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   // Google Sign-In 콜백 함수 - 백엔드 연동 추가
   async function handleCredentialResponse(response) {
     try {
-      // Google ID 토큰을 디코딩하여 사용자 정보를 획득
+      // Google ID 토큰을 디코딩하여 사용자 정보를 얻습니다.
       const responsePayload = decodeJwtResponse(response.credential);
       console.log("Google 사용자 정보:", responsePayload);
 
@@ -36,10 +42,12 @@ export default function Login() {
       if (apiResponse.ok) {
         console.log("로그인 성공:", result);
         // 토큰을 localStorage에 저장
+        //Authcontext의 login함수 사용
+        login(result.user, result.token);
         localStorage.setItem("token", result.token);
         localStorage.setItem("user", JSON.stringify(result.user));
         // 홈페이지로 리다이렉트
-        window.location.href = "/";
+        navigate("/");
       } else {
         console.error("로그인 실패:", result);
         alert("로그인에 실패했습니다. 다시 시도해주세요.");
@@ -65,10 +73,15 @@ export default function Login() {
           "985549267807-mu62klcok2e4q3su4qbfqklmb0n5b990.apps.googleusercontent.com",
         callback: handleCredentialResponse,
       });
-      // 공식 버튼도 함께 렌더링 (모든 환경 지원)
+      // 공식 버튼 렌더링(모든 환경 지원/)
       window.google.accounts.id.renderButton(
         document.getElementById("googleSignInDiv"),
-        { theme: "outline", size: "large" }
+        {
+          type: "icon",
+          theme: "outline",
+          shape: "circle",
+          size: "large"
+        }
       );
     }
   }, []);
@@ -123,7 +136,9 @@ export default function Login() {
           <button className="social-btn" onClick={handleGoogleLogin}>
             {/* <img src={googleIcon} alt="구글 로그인" /> */}
           </button>
+
           <div id="googleSignInDiv"></div>
+          <div className="g_id_signin" data-type="icon" data-shape="circle"></div>
 
 
         </div>
